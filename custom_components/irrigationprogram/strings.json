@@ -1,78 +1,78 @@
 {
     "services":{
 		"stop_programs":{
-			"name": "Stop programs",
-			"description": "Stop any running programs and zones."
+			"name": "Detener programas",
+			"description": "Detener cualquier programa y zona en ejecución."
 		},
 		"run_zone":{
-			"name": "Run zone",
-			"description": "Run a specific zone.",
+			"name": "Iniciar zona",
+			"description": "Activar una zone especifica.",
 			"fields": {
 				"entity_id": {
-					"name": "Irrigation Program",
-					"description": "The irrigation program to run"
+					"name": "Programa Riego",
+					"description": "Programa de riego a iniciar"
 				},
 				"zone": {
-					"name": "Zone",
-					"description": "Zones to run"
+					"name": "Zona",
+					"description": "Zonas para iniciar"
 				}
 			}
 		},
 		"toggle_zone":{
-			"name": "Toggle zone",
-			"description": "Run a specific zone.",
+			"name": "Alternar zona",
+			"description": "Iniciar una zona especifica.",
 			"fields": {
 				"entity_id": {
-					"name": "Irrigation Program",
-					"description": "The irrigation program to run"
+					"name": "Programa Riego",
+					"description": "Programa de riego a iniciar"
 				},
 				"zone": {
-					"name": "Zone",
-					"description": "Zones to run"
+					"name": "Zona",
+					"description": "Zonas para iniciar"
 				}
 			}
 		},
 		"reset_runtime":{
-			"name": "Reset runtimes",
-			"description": "Reset the runtime back to none for the program supports testing.",
+			"name": "Restablecer tiempos de ejecución",
+			"description": "Restablezca el tiempo de ejecución a ninguno para que el programa admita pruebas.",
 			"fields": {
 				"entity_id": {
-					"name": "Irrigation Program",
-					"description": "The irrigation program to run"
+					"name": "Programa Riego",
+					"description": "Programa de riego a iniciar"
 				}
 			}
 		},
 		"run_simulation":{
-			"name": "Run Simulation",
-			"description": "Simulate running a program. The results are shown in the log.",
+			"name": "Iniciar Simulación",
+			"description": "Simular la ejecución de un programa. Los resultados se muestran en el log.",
 			"fields": {
 				"entity_id": {
-					"name": "Irrigation Program",
-					"description": "The irrigation program to run"
+					"name": "Programa Riego",
+					"description": "Programa de riego a iniciar"
 				},
 				"scheduled": {
-					"name": "Scheduled",
-					"description": "Scheduled (true) or manual (false) execution simulation"
+					"name": "Programa",
+					"description": "Programada (true) or manual (false) ejecución de simulación"
 				}
 			}
 		},
 		"set_zone_status":{
-			"name": "Set zone status",
-			"description": "Set the zone status",
+			"name": "Establecer estado de zona",
+			"description": "Establecer estado de zona",
 			"fields": {
 				"entity_id": {
-					"name": "Irrigation zone status sensor",
-					"description": "The zone sensor to set"
+					"name": "Estado de sensor de zona de riego",
+					"description": "El sensor de zona a configurar"
 				}
 			}
 		},
 		"toggle":{
-			"name": "Toggle config sensor",
-			"description": "Toggle configuration",
+			"name": "Alternar configuración de sensor",
+			"description": "Alternar configuración",
 			"fields": {
 				"entity_id": {
-					"name": "Irrigation zone config sensor",
-					"description": "The zone config sensor to toggle"
+					"name": "Configuración de sensor zona de riego",
+					"description": "La configuración de la zona de sensor a alternar"
 				}
 			}
 		}
@@ -80,17 +80,17 @@
 	"selector": {
 		"status": {
 			"options": {
-				"off": "Off",
-				"on": "On",
-				"disable": "Disabled",
-				"pending": "Pending",
+				"off": "Apagado",
+				"on": "Encendido",
+				"disable": "Deshabilitado",
+				"pending": "Pendiente",
 				"eco": "ECO",
-				"onhold": "On-hold"
+				"onhold": "En espera"
 			}
 		},
 		"device_type": {
 			"options": {
-				"generic": "Generic",
+				"generic": "Generico",
 				"rainbird": "RainBird"
 			}
 	}
@@ -100,10 +100,10 @@
 		"sensor": {
 			"zonestatus": {
 				"state": {
-					"off": "Off",
-					"on": "On",
-					"disable": "Disabled",
-					"pending": "Pending",
+					"off": "Apagado",
+					"on": "Encendido",
+					"disable": "Deshabilitado",
+					"pending": "Pendiente",
 					"eco": "ECO"
 				}
 			}
@@ -111,58 +111,58 @@
 	},
 	"config": {
 		"error": {
-			"zone_defined": "Selected zone switch is already defined in this irrigation program",
-			"mandatory": "Required field not filled in",
-			"zone_required": "At least one zone must be defined"
+			"zone_defined": "El cambio de zona seleccionado ya está definido en este programa de riego",
+			"mandatory": "Campo obligatorio no completado",
+			"zone_required": "Al menos una zona debe ser definida"
  		},
 		"step": {
 			"user": {
-				"title": "Program data",
-				"description": "Defines the watering program",
+				"title": "Datos de programa",
+				"description": "Define el programa de riego",
 				"data": {
-					"name": "Name",
-					"run_freq": "Frequency entity",
-					"controller_monitor": "Monitor controller entity",
-					"start_time": "Start time entity",
-					"irrigation_on": "Enable irrigation entity",
-					"show_config": "Show configuration entity",
-					"device_type": "Controller type",
-					"inter_zone_delay": "Inter zone delay entity",
-					"interlock": "Prevent programs running concurrently"
+					"name": "Nombre",
+					"run_freq": "Entidad frecuencia",
+					"controller_monitor": "Entidad controlador monitor",
+					"start_time": "Entidad hora de inicio",
+					"irrigation_on": "Entidad habilitar riego",
+					"show_config": "Entidad mostrar configuración",
+					"device_type": "Tipo controlador",
+					"inter_zone_delay": "Entidad retardo entre zonas",
+					"interlock": "Evitar que los programas se ejecuten simultáneamente"
 				}
 			},
 			"zones": {
-				"title": "Program Zones",
-				"description": "Zone configuration",
+				"title": "Programa de Zonas",
+				"description": "Configuración de Zonas",
 				"data": {
-					"zone": "Zone switch entity",
-					"pump": "Pump switch entity",
-					"flow_sensor": "Flow sensor entity",
-					"water_adjustment": "Water adjustment entity",
-					"run_freq": "Frequency entity",
-					"rain_sensor": "Rain sensor entity",
-					"group": "Zone group entity",
-					"water": "Water runtime entity",
-					"wait": "Wait time entity",
-					"repeat": "Repeat count entity",
-					"ignore_rain_sensor": "Ignore rain sensor entity",
-					"enable_zone": "Enable zone entity",
-					"show_config": "Show configuration entity"
+					"zone": "Entidad switch zonas",
+					"pump": "Entidad switch bomba",
+					"flow_sensor": "Entidad sensor caudal",
+					"water_adjustment": "Entidad ajuste de agua",
+					"run_freq": "Entidad frequencia",
+					"rain_sensor": "Entidad sensor de lluvia",
+					"group": "Entidad grupo zona",
+					"water": "Entidad tiempo de uso de agua",
+					"wait": "Entidad Tiempo de espera",
+					"repeat": "Entidad repetir recuento",
+					"ignore_rain_sensor": "Entidad ignorar sensor de lluvia",
+					"enable_zone": "Entidad habilitar zona",
+					"show_config": "Entidad mostrar configuración"
 				}
 			},
 			"menu": {
 				"description": "",
 				"menu_options": {
-					"add_group": "Add zone group",
-					"zones": "Add zone",
-					"finalise": "Apply"
+					"add_group": "Agregar grupo zona",
+					"zones": "Agregar zona",
+					"finalise": "Aplicar"
 				}
 			},
 			"add_group": {
-				"title": "Group configuration",
-				"description": "Add group",
+				"title": "Configuración de grupo",
+				"description": "Agregar grupo",
 				"data": {
-					"zones": "Select zones"
+					"zones": "Seleccionar zonas"
 				}
 			}
 		}
@@ -170,104 +170,104 @@
 
     "options": {
 		"error": {
-			"zone_defined": "Selected zone switch is already defined in this irrigation program",
-			"group_define": "Selected group name has already been used",
-			"two_zones_required": "At least two zones required to create a group",
-			"mandatory": "Required field not filled in",
-			"zone_required": "At least one zone must be defined"
+			"zone_defined": "El cambio de zona seleccionado ya está definido en este programa de riego",
+			"group_define": "El nombre del grupo seleccionado ya se ha utilizado",
+			"two_zones_required": "Se requieren al menos dos zonas para crear un grupo",
+			"mandatory": "Campo obligatorio no completado",
+			"zone_required": "Al menos una zona debe ser definida"
 		},
 		"step": {
 			"user": {
-				"description": "If a zone is deleted or zone switch is changed, any related group will be deleted",
+				"description": "Si se elimina una zona o se cambia una zona, se eliminará cualquier grupo relacionado",
 				"menu_options": {
-					"update_program": "Update program",
-					"update_zone": "Update zone",
-					"delete_zone": "Delete zone",
-					"add_zone": "Add zone",
-					"add_group": "Add zone group",
-					"delete_group": "Delete zone group",
-					"finalise": "Apply"
+					"update_program": "Actualizar programa",
+					"update_zone": "Actualizar zona",
+					"delete_zone": "Borrar zona",
+					"add_zone": "Agregar zona",
+					"add_group": "Agregar grupo de zona",
+					"delete_group": "Borrar grupo de zona",
+					"finalise": "Aplicar"
 				}
 			},
 			"update_program": {
-				"title": "Program data",
-				"description": "Update watering program",
+				"title": "Datos de programa",
+				"description": "Actualizar programa de riego",
 				"data": {
-						"run_freq": "Run frequency entity",
-						"controller_monitor": "Monitor controller entity",
-						"start_time": "Start time entity",
-						"irrigation_on": "Enable irrigation entity",
-						"show_config": "Show configuration entity",
-						"device_type": "Controller type",
-						"inter_zone_delay": "Inter zone delay entity",
-						"interlock": "prevent programs running concurrently"
+						"run_freq": "Entidad iniciar frequencia",
+						"controller_monitor": "Entidad controlador monitor",
+						"start_time": "Entidad iniciar tiempo",
+						"irrigation_on": "Entidad habilitar riego",
+						"show_config": "Entidad mostrar configuración",
+						"device_type": "Tipo de controlador",
+						"inter_zone_delay": "Entidad ratardo entre zonas",
+						"interlock": "Evitar que los programas se ejecuten simultáneamente"
 				}
 			},
 			"add_zone": {
-				"title": "Zone configuration",
-				"description": "Define zone",
+				"title": "Configuración de zona",
+				"description": "Definir zona",
 				"data": {
-					"zone": "Zone switch entity",
-					"pump": "Pump switch entity",
-					"flow_sensor": "Flow sensor entity",
-					"water_adjustment": "Water adjustment entity",
-					"run_freq": "Frequency entity",
-					"rain_sensor": "Rain sensor entity",
-					"group": "Zone group entity",
-					"water": "Water runtime entity",
-					"wait": "Wait time entity",
-					"repeat": "Repeat count entity",
-					"ignore_rain_sensor": "Ignore rain sensor entity",
-					"enable_zone": "Enable zone entity",
-					"show_config": "Show configuration entity"
+					"zone": "Entidad switch zona",
+					"pump": "Entidad switch bomba",
+					"flow_sensor": "Entidad sensor caudal",
+					"water_adjustment": "Entidad ajuste de agua",
+					"run_freq": "Entidad frequencia",
+					"rain_sensor": "Entidad sensor de lluvia",
+					"group": "Entidad grupo de zona",
+					"water": "Entidad tiempo de uso de agua",
+					"wait": "Entidad tiempo de espera",
+					"repeat": "Entidad repetir recuento",
+					"ignore_rain_sensor": "Entidad ignorar sensor de lluvia",
+					"enable_zone": "Entidad habilitar zona",
+					"show_config": "Entidad mostrar configuración"
 
 				}
 			},
 			"update_zone_data": {
-				"title": "Zone configuration",
-				"description": "Update zone",
+				"title": "Configuración de zona",
+				"description": "Actualizar zona",
 				"data": {
-					"zone": "Zone switch entity",
-					"pump": "Pump switch entity",
-					"flow_sensor": "Flow sensor entity",
-					"water_adjustment": "Water adjustment entity",
-					"run_freq": "Frequency entity",
-					"rain_sensor": "Rain sensor entity",
-					"group": "Zone group entity",
-					"water": "Water runtime entity",
-					"wait": "Wait time entity",
-					"repeat": "Repeat count entity",
-					"ignore_rain_sensor": "Ignore rain sensor entity",
-					"enable_zone": "Enable zone entity",
-					"show_config": "Show configuration entity"
+					"zone": "Entidad switch zona",
+					"pump": "Entidad switch bomba",
+					"flow_sensor": "Entidad sensor caudal",
+					"water_adjustment": "Entidad ajuste de agua",
+					"run_freq": "Entidad frequencia",
+					"rain_sensor": "Entidad sensor de lluvia",
+					"group": "Entidad grupo de zona",
+					"water": "Entidad tiempo de uso de agua",
+					"wait": "Entidad tiempo de espera",
+					"repeat": "Entidad repetir recuento",
+					"ignore_rain_sensor": "Entidad ignorar sensor de lluvia",
+					"enable_zone": "Entidad habilitar zona",
+					"show_config": "Entidad mostrar configuración"
 				}
 			},
 			"delete_zone": {
-				"title": "Zone configuration",
-				"description": "Delete zone",
+				"title": "Configuración de zona",
+				"description": "Borrar zona",
 				"data": {
-					"zone": "Select zone"
+					"zone": "Seleccionar zona"
 				}
 			},
 			"update_zone": {
-				"title": "Zone configuration",
-				"description": "Update zone",
+				"title": "Configuración de zone",
+				"description": "Actualizar zona",
 				"data": {
-					"zone": "Select zone"
+					"zone": "Seleccionar zona"
 				}
 			},
 			"add_group": {
-				"title": "Group configuration",
-				"description": "Add group",
+				"title": "Configuración de grupo",
+				"description": "Agregar grupo",
 				"data": {
-					"zones": "Select zones"
+					"zones": "Seleccionar zonas"
 				}
 			},
 			"delete_group": {
-				"title": "Group configuration",
-				"description": "Delete Group",
+				"title": "Configuración de grupo",
+				"description": "borrar grupo",
 				"data": {
-					"group": "Select group"
+					"group": "Seleccionar grupo"
 				}
 			}
 		}
